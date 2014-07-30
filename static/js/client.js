@@ -412,7 +412,7 @@
                     .attr('x2', xScale(dataRange[1]))
                     .attr('y2', yScale(scaleBg(140)))
                     .style('stroke-dasharray', ('3, 3'))
-                    .attr('stroke', 'grey');
+                    .attr('stroke', 'yellow');
 
                 // add a y-axis line that shows the low bg threshold
                 focus.append('line')
@@ -422,7 +422,7 @@
                     .attr('x2', xScale(dataRange[1]))
                     .attr('y2', yScale(scaleBg(70)))
                     .style('stroke-dasharray', ('3, 3'))
-                    .attr('stroke', 'grey');
+                    .attr('stroke', 'red');
 
                 // add a y-axis line that opens up the brush extent from the context to the focus
                 focus.append('line')
@@ -458,7 +458,7 @@
                     .attr('x2', xScale(dataRange[1]))
                     .attr('y2', yScale2(scaleBg(140)))
                     .style('stroke-dasharray', ('3, 3'))
-                    .attr('stroke', 'grey');
+                    .attr('stroke', 'yellow');
 
                 // add a y-axis line that shows the low bg threshold
                 context.append('line')
@@ -468,7 +468,7 @@
                     .attr('x2', xScale(dataRange[1]))
                     .attr('y2', yScale2(scaleBg(70)))
                     .style('stroke-dasharray', ('3, 3'))
-                    .attr('stroke', 'grey');
+                    .attr('stroke', 'red');
 
             } else {
 
