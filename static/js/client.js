@@ -697,7 +697,7 @@
                 $('#lastEntry').text(timeAgo(secsSinceLast)).toggleClass('current', secsSinceLast < 10 * 60);
                 $('.container .currentBG').text(currentBG);
                 $('.container .currentDirection').html(current.direction);
-                $('.container .current').toggleClass('high', current.y > 180).toggleClass('low', current.y < 70)
+                $('.container .current').toggleClass('high', current.y > 140).toggleClass('low', current.y < 70)
             }
             data = d[0].map(function (obj) { return obj.y > 10; }).map(function (obj) {
                 var color = '';
@@ -712,7 +712,7 @@
                         color = 'red';
                         break;
                 }
-                return { date: new Date(obj.x), sgv: scaleBg(obj.y), color: color}
+                return { date: new Date(obj.x), sgv: obj.y, color: color}
             });
             data = data.concat(d[1].map(function (obj) { return { date: new Date(obj.x), sgv: scaleBg(obj.y), color: 'blue'} }));
             data = data.concat(d[2].map(function (obj) { return { date: new Date(obj.x), sgv: scaleBg(obj.y), color: 'red'} }));
