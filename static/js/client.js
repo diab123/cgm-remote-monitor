@@ -699,7 +699,7 @@
                 $('.container .currentDirection').html(current.direction);
                 $('.container .current').toggleClass('high', current.y > 180).toggleClass('low', current.y < 70)
             }
-            data = d[0].map(function (obj) { return scalebg(obj.y > 10; }).map(function (obj) {
+            data = d[0].map(function (obj) { return scalebg(obj.y > 10; )}).map(function (obj) {
                 var color = '';
                 switch (true) {
                     case scalebg(obj.y > 140):
