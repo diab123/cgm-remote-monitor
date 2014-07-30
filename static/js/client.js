@@ -712,7 +712,8 @@
                         color = 'red';
                         break;
                 }
-                return { date: new Date(obj.x), sgv: scaleBg(obj.y), direction: obj.direction, color: color} });
+                return { date: new Date(obj.x), sgv: scaleBg(obj.y), direction: obj.direction, color: color}
+            });
             data = data.concat(d[1].map(function (obj) { return { date: new Date(obj.x), sgv: scaleBg(obj.y), color: 'blue'} }));
             data = data.concat(d[2].map(function (obj) { return { date: new Date(obj.x), sgv: scaleBg(obj.y), color: 'red'} }));
 
