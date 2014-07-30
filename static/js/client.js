@@ -412,7 +412,7 @@
                     .attr('x2', xScale(dataRange[1]))
                     .attr('y2', yScale(scaleBg(140)))
                     .style('stroke-dasharray', ('3, 3'))
-                    .attr('stroke', 'yellow');
+                    .attr('stroke', 'grey');
 
                 // add a y-axis line that shows the low bg threshold
                 focus.append('line')
@@ -422,7 +422,7 @@
                     .attr('x2', xScale(dataRange[1]))
                     .attr('y2', yScale(scaleBg(70)))
                     .style('stroke-dasharray', ('3, 3'))
-                    .attr('stroke', 'red');
+                    .attr('stroke', 'grey');
 
                 // add a y-axis line that opens up the brush extent from the context to the focus
                 focus.append('line')
@@ -699,16 +699,16 @@
                 $('.container .currentDirection').html(current.direction);
                 $('.container .current').toggleClass('high', current.y > 180).toggleClass('low', current.y < 70)
             }
-            data = d[0].map(function (obj) { return obj.y > 10; }).map(function (obj) {
+            data = d[0].map(function (obj) { return scalebg(obj.y) > 10; }).map(function (obj) {
                 var color = '';
                 switch (true) {
-                    case (obj.y > 140):
+                    case scalebg(obj.y) > 140):
                         color = 'yellow';
                         break;
-                    case (obj.y >=70 && obj.y <= 140):
+                    case scalebg(obj.y) >=70 && scalebg(obj.y) <= 140):
                         color = 'green';
                         break;
-                    case (obj.y < 70):
+                    case scalebg(obj.y) < 70):
                         color = 'red';
                         break;
                 }
